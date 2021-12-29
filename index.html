@@ -1,10 +1,13 @@
+<? require_once ("/data/Site/www/tpl/common/popupAward2021.html"); ?>
+<? require_once ("/data/Site/www/tpl/common/popLogin.htm"); ?><!-- //로그인 div 팝업:2017-03-20:MK.Lee -->
+<? require_once ("/data/Site/www/tpl/common/popupSUGI.html"); ?>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="/js/jquery.simplyscroll.min.js"></script>
 <link href="/css/jquery.simplyscroll.css" rel="stylesheet" />
-<link rel="stylesheet" href="/css/animate.css" />
-<script src="/js/jquery.bxslider.js"></script>
-<link href="/css/jquery.bxslider.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
 <link href="/css/Submain_ganhohak.css" rel="stylesheet" />
 <script src="https://kit.fontawesome.com/bcc2540eda.js" crossorigin="anonymous"></script>
 <link href="/css/LectureGuide.css" rel="stylesheet" />
@@ -140,25 +143,18 @@
 
     #submainN .visual_mid .mid_inner .inner_cont .certification_cont{width:920px; display:flex; visibility: hidden;}
     #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide{width:calc(100%/3); margin-right:25px; border:1px solid #e1e1e1;text-align:center;}
-    #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide .ctf_slider{display:flex; flex-wrap:wrap; padding:20px 0;
-        background: #f2f2f2; 
-        background: -moz-linear-gradient(top,  #f2f2f2 90%, #ddd 100%); 
-        background: -webkit-linear-gradient(top,  #f2f2f2 90%,#ddd 100%); 
-        background: linear-gradient(to bottom,  #f2f2f2 90%,#ddd 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ddd',GradientType=0 ); 
-    }
     #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide .slider_btm{padding:27px 0; background:#fff; font-size:13px; line-height:1.2; color:#9b9b9b;}
     #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide .slider_btm strong{display:block; font-size:19px; font-weight:700; color:#222; letter-spacing:-1px; margin-bottom:15px;}
     #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide .bx-wrapper{margin-bottom:0;}
-    #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide .ctf_slider div{padding:10px 0; font-size:13px; line-height:1.2; color:#adadad; width:50%; 
-        /* 
-        background: #f2f2f2; 
-        background: -moz-linear-gradient(top,  #f2f2f2 90%, #ddd 100%); 
-        background: -webkit-linear-gradient(top,  #f2f2f2 90%,#ddd 100%); 
-        background: linear-gradient(to bottom,  #f2f2f2 90%,#ddd 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ddd',GradientType=0 ); */
+    #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide .ctf_slider div{padding:65px 0 50px; font-size:13px; line-height:1.2; color:#adadad;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f2f2+80,e5e5e5+100 */
+        background: #f2f2f2; /* Old browsers */
+        background: -moz-linear-gradient(top,  #f2f2f2 90%, #ddd 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #f2f2f2 90%,#ddd 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #f2f2f2 90%,#ddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ddd',GradientType=0 ); /* IE6-9 */
     }       
-    #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide .ctf_slider div img{display:block; height:40px; margin:0 auto 20px;}
+    #submainN .visual_mid .mid_inner .inner_cont .certification_cont .certification_slide .ctf_slider div img{margin:0 auto 20px;}
     #submainN .visual_mid .mid_inner .inner_cont .certification_cont .bx-wrapper .bx-controls-direction a{width:24px; height:24px; border:1px solid #e1e1e1; top:15px; z-index: 99;}
     #submainN .visual_mid .mid_inner .inner_cont .certification_cont .bx-wrapper .bx-prev{background:url('https://img.duespec.com/common/controls.png') no-repeat -132px -1px; right:24px; left:unset;}
     #submainN .visual_mid .mid_inner .inner_cont .certification_cont .bx-wrapper .bx-next{background:url('https://img.duespec.com/common/controls.png') no-repeat -155px -1px; right:-1px;}
@@ -309,18 +305,91 @@ $(document).ready(function($){
     <div class="visual_mid blackbg">
         <div class="mid_inner redkit">
             <div class="inner_tit"><strong>1. 가장 <b>잘</b> 아니까!</strong>(25년 간호사와의 행복한 동행!)</div>   
-
-            <div class="inner_cont">                
-                <div style="width:920px; background:#fff; height:300px; position:relative; z-index:99;"></div>
-                
-                <div class="inner_btn">
-                    <a href="/main.htm?q=M002&s=teacher&t=2">
-                        <h2>오랜 노하우로 완성한<br/>적중률 높은</h2>
-                        <h3>전문 강의 & 교재</h3>
-                    </a>
-                </div><!--inner_btn-->   
-                
-            </div><!--inner_cont-->
+        </div><!--mid_inner-->
+        
+        <div class="inner_cont hiscon" style="position: relative; z-index: 10; margin:80px auto;">                
+            <div class="history_cont">
+                <ul id="scroller">
+                    <li><img src="https://img.duespec.com/common/submain/history/2002 국제 간호사의 날 .jpg">2002 국제 간호사의 날</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2005 국가고시 현장.jpg">2005 국가고시 현장</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2006 국가고시 현장.jpg">2006 국가고시 현장</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2008 국가고시 응원전.jpg">2008 국가고시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2011 대한간호협회 창립 88주년 행사.jpg">2011 대한간호협회 창립 88주년 행사</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2012 간호정책선포식.jpg">2012 간호정책선포식</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2013 국가고시 응원전.jpg">2013 국가고시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2014 전국간호대학생 동계 MT.jpg">2014 전국간호대학생 동계 MT</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2014 제1회 간호마라톤 대회.jpg">2014 제1회 간호마라톤 대회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2015 국제간호사협의회.jpg">2015 국제간호사협의회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2015 널싱런.jpg">2015 널싱런</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2015 서울 세계간호사대회.jpg">2015 서울 세계간호사대회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2015 제1회 병원코디네이터의 날 - 학술세미나.jpg">2015 제1회 병원코디네이터의 날</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2016 전국간호대학생연합 정기총회.jpg">2016 전국간호대학생연합 정기총회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2017 국가고시 현장.jpg">2017 국가고시 현장</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2017 국회 어린이 안전 포럼 창립대회.jpg">2017 국회 어린이 안전 포럼 창립대회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2018 간호학과 진로 강연.jpg">2018 간호학과 진로 강연</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2019 초록우산어린이 재단 기부금 전달.jpg">2019 초록우산어린이 재단 기부금 전달</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2020 코로나19 극복 기부금 전달.jpg">2020 코로나19 극복 기부금 전달</li>                    
+                    
+                    
+                    <!--li><img src="https://img.duespec.com/common/submain/history/2001 보건의료인 국시 응원전.jpg">2001 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2002 국제 보건의료의 날.jpg">2002 국제 보건의료의 날</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2004 보건의료인 국시 응원전.jpg">2004 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2006 보건의료인 국시 응원전.jpg">2006 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2007 공무원 시험현장.jpg">2007 공무원 시험현장</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2008 보건의료인 국시 응원전.jpg">2008 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2009 보건의료인 국시 응원전.jpg">2009 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2010 보건의료인 국시 응원전.jpg">2010 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2011 보건의료인 국시 응원전.jpg">2011 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2012 보건의료 정책선포식.jpg">2012 보건의료 정책선포식</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2013 보건의료인 국시 응원전.jpg">2013 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2014 보건의료 대학생 동계 MT.jpg">2014 보건의료 대학생 동계 MT</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2014 보건의료인 마라톤대회.jpg">2014 보건의료인 마라톤대회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2015 국제 보건의료협의회.jpg">2015 국제 보건의료협의회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2015 병원코디네이터 학술세미나.jpg">2015 병원코디네이터 학술세미나</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2016 공무원 시험현장.jpg">2016 공무원 시험현장</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2016 보건의료 대학생 정기총회.jpg">2016 보건의료 대학생 정기총회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2017 공무원 시험현장.jpg">2017 공무원 시험현장</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2017 국회 어린이 안전 포럼 창립대회.jpg">2017 국회 어린이 안전 포럼 창립대회</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2017 보건의료인 국시 응원전.jpg">2017 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2018 보건의료인 국시 응원전.jpg">2018 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2018 보건의료인 진로 강연.jpg">2018 보건의료인 진로 강연</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2019 보건의료인 국시 응원전.jpg">2019 보건의료인 국시 응원전</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2019 초록우산어린이 재단 기부금 전달.jpg">2019 초록우산어린이 재단 기부금 전달</li>
+                    <li><img src="https://img.duespec.com/common/submain/history/2020 코로나19 극복 기부금 전달.jpg">2020 코로나19 극복 기부금 전달</li-->     
+                        
+                        
+                     <!--li><img src="https://img.duespec.com/common/submain/history/1999 차세대 국방사업 공개설명회.jpg">1999 차세대 국방사업 공개설명회</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2010년 전역군인채용박람회.jpg">2010년 전역군인채용박람회</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2011 군무원 시험 응원전.jpg">2011 군무원 시험 응원전</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2012년 전역군인채용박람회.jpg">2012년 전역군인채용박람회</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2013 군무원 시험 응원전.jpg">2013 군무원 시험 응원전</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2014 국가보훈처 지정 교육기관 선정.jpg">2014 국가보훈처 지정 교육기관 선정</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2014 군무원 시험 응원전.jpg">2014 군무원 시험 응원전</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2014 순국선혈의 날 추모제.jpg">2014 순국선혈의 날 추모제</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2015 군무원 시험 응원전.jpg">2015 군무원 시험 응원전</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2016 국방의날 기념행사.jpg">2016 국방의날 기념행사</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2016 국방정보화사업 통합설명회.jpg">2016 국방정보화사업 통합설명회</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2017 군무원 시험 응원전.jpg">2017 군무원 시험 응원전</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2018 군무원 시험 응원전.jpg">2018 군무원 시험 응원전</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2018 육군 간부 임관식.jpg">2018 육군 간부 임관식</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2019 군무원 시험 응원전.jpg">2019 군무원 시험 응원전</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2020 군무원 시험 응원전.jpg">2020 군무원 시험 응원전</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history/2020 군무원 채용전망 설명회.jpg">2020 군무원 채용전망 설명회</li>   
+                     <li><img src="https://img.duespec.com/common/submain/history2021 군무원 시험 응원전/.jpg">2021 군무원 시험 응원전</li-->   
+                     
+                        
+                                       
+                </ul>
+            </div>
+        </div><!--inner_cont-->
+        
+        <div class="mid_inner redkit" style="display:flex; justify-content:flex-end; height:270px; margin-top:-305px;">
+            <div class="inner_btn history_btn">
+                <a href="/main.htm?q=M002&s=teacher&t=2">
+                    <h2>오랜 노하우로 완성한<br/>적중률 높은</h2>
+                    <h3>전문 강의 & 교재</h3>
+                </a>
+            </div><!--inner_btn-->     
         </div><!--mid_inner-->
         
     </div><!--visual_mid-->
@@ -328,9 +397,8 @@ $(document).ready(function($){
     <div class="visual_mid">
         <div class="mid_inner">            
             <div class="inner_tit"><strong>2. 가장 <b>많이</b> 합격하니까!</strong>(합격자 선배들의 강력추천!)</div>            
-            <div class="inner_cont">     
-                <div style="width:920px;"><img src="https://img.duespec.com/common/submain/sugibox_M002_ganhohak.png" style="width:100%;"></div>               
-                <!--div class="sugicont">
+            <div class="inner_cont">   
+                <div class="sugicont">
                     <div class="tagtab">
                         <div class="tagtit tagon">#국시병행</div>
                         <div class="tagtit">#웨이팅게일</div>
@@ -338,7 +406,7 @@ $(document).ready(function($){
                         <div class="tagtit">#휴직/퇴직</div>
                     </div><!--tagtab-->     
                     
-                    <!--div class="sugibox women4" style="display:block;">
+                    <div class="sugibox women4" style="display:block;">
                         <div class="sugi">
                             <div class="sugitxt">
                                 <h2>빠른 준비로 빠르게 합격하는 수험생!</h2>
@@ -350,7 +418,7 @@ $(document).ready(function($){
                             </div>
                         </div>
                     </div><!--sugibox-->            
-                    <!--div class="sugibox men3">
+                    <div class="sugibox men3">
                         <div class="sugi">
                             <div class="sugitxt">
                                 <h2>매일 매일 꾸준히 심도있게 준비하는 수험생!</h2>
@@ -363,7 +431,7 @@ $(document).ready(function($){
                             </div>
                         </div>
                     </div><!--sugibox-->         
-                    <!--div class="sugibox women3">
+                    <div class="sugibox women3">
                         <div class="sugi">
                             <div class="sugitxt">
                                 <h2>핵심만 알차게 공략하고 싶은 수험생!</h2>
@@ -376,7 +444,7 @@ $(document).ready(function($){
                             </div>
                         </div>
                     </div><!--sugibox-->      
-                    <!--div class="sugibox women1">
+                    <div class="sugibox women1">
                         <div class="sugi">
                             <div class="sugitxt">
                                 <h2>전문성을 살려 도약하고 싶은 수험생!</h2>
@@ -389,7 +457,7 @@ $(document).ready(function($){
                             </div>
                         </div>
                     </div><!--sugibox-->  
-                <!--/div><!--sugicont-->
+                </div><!--sugicont-->
 
                 <div class="inner_btn sugibtn">
                     <a href="/main.htm?q=M002&s=plan&t=3">
@@ -402,15 +470,14 @@ $(document).ready(function($){
         </div><!--mid_inner-->
     </div><!--visual_mid-->
     
-
     <div class="visual_mid">
         <div class="mid_inner redkit">
-            <div class="inner_tit" style="position:relative;"><strong>3. 가장 <b>많이</b> 인정하니까!</strong><!--a href="javascript:;" onclick="view_all_ctf();" class="view_all">인증내역 전체보기</a--></div> 
+            <div class="inner_tit" style="position:relative;"><strong>3. 가장 <b>많이</b> 인정하니까!</strong>(대 내외적 교육 인증 기관!)<a href="javascript:;" onclick="view_all_ctf();" class="view_all">인증내역 전체보기</a></div> 
             <div class="inner_cont">                
                 <div style="position: relative;">
                     <div class="certification_cont">
-                        <div class="certification_slide" style="visibility:visible;">
-                            <div class="bxslider ctf_slider" id="ctf_sl ider01">
+                        <div class="certification_slide">
+                            <div class="bxslider ctf_slider" id="ctf_slider01">
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf01.png">제 2013-120019<br/>좋은콘텐츠 제공기업</div>
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf02.png">ICR ISO9001:2015<br/>교육 품질 인증기업</div>
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf03.png">제 2014110927호<br/>교육 연구소 인정기업</div>
@@ -419,8 +486,8 @@ $(document).ready(function($){
                             </div>
                             <div class="slider_btm"><strong>좋은 콘텐츠 제공 기업</strong>빠른 고득점 합격을 위해,<br/>최고의 교재와 강의를 제공합니다.</div>
                         </div><!--certification_slide-->
-                        <div class="certification_slide" style="visibility:visible;">
-                            <div class="bxslider ctf_slider" id="ctf_s lider02">
+                        <div class="certification_slide">
+                            <div class="bxslider ctf_slider" id="ctf_slider02">
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf06.png">한국산업인력공단 인정<br/>체계적 현장 훈련기관</div>
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf07.png">ICR ISO14001:2015<br/>교육 환경 인증기업</div>
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf08.png">국가보훈처 지정<br/>취업지원 교육기관</div>
@@ -430,8 +497,8 @@ $(document).ready(function($){
                             </div>
                             <div class="slider_btm"><strong>체계적 교육 인증 기업</strong>체계적이고 완성도 높은 학습을 위한<br/>최고의 커리큘럼과 학습 환경을 제공합니다.</div>
                         </div><!--certification_slide-->
-                        <div class="certification_slide" style="visibility:visible;">
-                            <div class="bxslider ctf_slider" id="ctf_slid er03">
+                        <div class="certification_slide">
+                            <div class="bxslider ctf_slider" id="ctf_slider03">
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf12.png">대한적십자사<br/>불우이웃 후원기관</div>
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf13.png">국민건강보험공단 인정<br/>국민건강 모범기관</div>
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf14.png">씀씀이가 바른기업<br/>나눔실천 모범기관</div>
@@ -443,7 +510,7 @@ $(document).ready(function($){
                         </div><!--certification_slide-->
                     </div><!--certification_cont-->  
                     
-                    <!--div class="certification_popup">
+                    <div class="certification_popup">
                         <div class="certification_popup_inner">
                             <h2>간호교육연수원 인증내역<a href="#" class="ctf_X" onclick="ctf_X();"><i class="fas fa-times"></i></a></h2>   
                             <div class="ctf_cont">
@@ -466,14 +533,14 @@ $(document).ready(function($){
                                 <div class="ctf"><img src="https://img.duespec.com/common/submain/ctf17.png">한국언론인협회 선정<br/>교육장학 공헌기관</div>
                             </div>
                         </div>
-                    </div--><!--certification_popup-->
+                    </div><!--certification_popup-->
                     
                 </div>
                 
                 <div class="inner_btn certification_btn">
                     <a href="javascript:;" onclick="award2021PopUpGo();">
-                        <h2>간호·보건 대표 기업<br/>간호교육연수원</h2>
-                        <h3>대내외적<br/>보도자료</h3>
+                        <h2>간호·보건</h2>
+                        <h3>대표<br/>교육기업</h3>
                     </a>
                 </div><!--inner_btn-->     
                  
